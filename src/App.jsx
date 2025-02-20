@@ -5,22 +5,45 @@ import Counter from "./Components/Counter.jsx";
 import TextInput from "./Components/TextInput.jsx";
 import DataFetcher from "./Components/DataFetcher.jsx";
 import UserList from "./Components/UserList.jsx";
-import {MyProvider} from "./Contexts/MyContext.jsx";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home.jsx";
+import About from "./Pages/About.jsx";
+import Profile from "./Pages/Profile.jsx";
 import DisplayValue from "./Components/DisplayValue.jsx";
 import UpdateValue from "./Components/UpdateValue.jsx";
+import {MyProvider} from "./Contexts/MyContext.jsx";
+import PrivateRoute from "./Pages/PrivateRoute.jsx";
 
 const App = () => {
     return (
-        <MyProvider>
-            <Greeting name="Константин"/>
-            <CurrentDateTime/>
-            <Counter/>
-            <TextInput/>
-            <DataFetcher/>
-            <UserList/>
-            <DisplayValue/>
-            <UpdateValue/>
-        </MyProvider>
+        <Router>
+            <div className="App">
+                <nav>
+                    <ul>
+                        <li><Link to="/">Главная</Link></li>
+                        <li><Link to="/about">О нас</Link></li>
+                        <li><Link to="/profile">Профиль</Link></li>
+                    </ul>
+                </nav>
+                <header className="App-header">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/profile" element={<PrivateRoute component={Profile} />} />
+                    </Routes>
+                    <MyProvider>
+                        <Greeting name="Мир" />
+                        <CurrentDateTime />
+                        <Counter />
+                        <TextInput />
+                        <DataFetcher />
+                        <UserList />
+                        <DisplayValue/>
+                        <UpdateValue/>
+                    </MyProvider>
+                </header>
+            </div>
+        </Router>
     );
 }
 
