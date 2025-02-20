@@ -14,6 +14,7 @@ import UpdateValue from "./Components/UpdateValue.jsx";
 import {MyProvider} from "./Contexts/MyContext.jsx";
 import PrivateRoute from "./Pages/PrivateRoute.jsx";
 import JqueryExample from "./Components/JqueryExample.jsx";
+import EventHandlers from "./Components/EventHandlers.jsx";
 
 const App = () => {
     return (
@@ -32,6 +33,7 @@ const App = () => {
                         <Route path="/about" element={<About/>}/>
                         <Route path="/profile" element={<PrivateRoute component={Profile}/>}/>
                     </Routes>
+                    <EventHandlers/>
                     <JqueryExample/>
                     <MyProvider>
                         <Greeting name="Мир"/>
