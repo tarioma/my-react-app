@@ -5,7 +5,7 @@ import Counter from "./Components/Counter.jsx";
 import TextInput from "./Components/TextInput.jsx";
 import DataFetcher from "./Components/DataFetcher.jsx";
 import UserList from "./Components/UserList.jsx";
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import About from "./Pages/About.jsx";
 import Profile from "./Pages/Profile.jsx";
@@ -13,6 +13,7 @@ import DisplayValue from "./Components/DisplayValue.jsx";
 import UpdateValue from "./Components/UpdateValue.jsx";
 import {MyProvider} from "./Contexts/MyContext.jsx";
 import PrivateRoute from "./Pages/PrivateRoute.jsx";
+import JqueryExample from "./Components/JqueryExample.jsx";
 
 const App = () => {
     return (
@@ -27,17 +28,18 @@ const App = () => {
                 </nav>
                 <header className="App-header">
                     <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/profile" element={<PrivateRoute component={Profile} />} />
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/about" element={<About/>}/>
+                        <Route path="/profile" element={<PrivateRoute component={Profile}/>}/>
                     </Routes>
+                    <JqueryExample/>
                     <MyProvider>
-                        <Greeting name="Мир" />
-                        <CurrentDateTime />
-                        <Counter />
-                        <TextInput />
-                        <DataFetcher />
-                        <UserList />
+                        <Greeting name="Мир"/>
+                        <CurrentDateTime/>
+                        <Counter/>
+                        <TextInput/>
+                        <DataFetcher/>
+                        <UserList/>
                         <DisplayValue/>
                         <UpdateValue/>
                     </MyProvider>
