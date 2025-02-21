@@ -19,6 +19,7 @@ import Animations from "./Components/Animations.jsx";
 import AjaxExample from "./Components/AjaxExample.jsx";
 import LodashExample from "./Components/LodashExample.jsx";
 import LodashObjectsCollections from "./Components/LodashObjectsCollections.jsx";
+import LodashUtilities from "./Components/LodashUtilities.jsx";
 
 const App = () => {
     return (
@@ -37,6 +38,7 @@ const App = () => {
                         <Route path="/about" element={<About/>}/>
                         <Route path="/profile" element={<PrivateRoute component={Profile}/>}/>
                     </Routes>
+                    <LodashUtilities/>
                     <LodashObjectsCollections/>
                     <LodashExample/>
                     <AjaxExample/>
