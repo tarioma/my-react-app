@@ -17,6 +17,7 @@ import JqueryExample from "./Components/JqueryExample.jsx";
 import EventHandlers from "./Components/EventHandlers.jsx";
 import Animations from "./Components/Animations.jsx";
 import AjaxExample from "./Components/AjaxExample.jsx";
+import LodashExample from "./Components/LodashExample.jsx";
 
 const App = () => {
     return (
@@ -35,6 +36,7 @@ const App = () => {
                         <Route path="/about" element={<About/>}/>
                         <Route path="/profile" element={<PrivateRoute component={Profile}/>}/>
                     </Routes>
+                    <LodashExample/>
                     <AjaxExample/>
                     <Animations/>
                     <EventHandlers/>
