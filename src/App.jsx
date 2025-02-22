@@ -20,6 +20,8 @@ import AjaxExample from "./Components/AjaxExample.jsx";
 import LodashExample from "./Components/LodashExample.jsx";
 import LodashObjectsCollections from "./Components/LodashObjectsCollections.jsx";
 import LodashUtilities from "./Components/LodashUtilities.jsx";
+import D3Example from "./Components/D3Example.jsx";
+import LineChart from "./Components/LineChart.jsx";
 
 const App = () => {
     return (
@@ -38,6 +40,8 @@ const App = () => {
                         <Route path="/about" element={<About/>}/>
                         <Route path="/profile" element={<PrivateRoute component={Profile}/>}/>
                     </Routes>
+                    <LineChart/>
+                    <D3Example/>
                     <LodashUtilities/>
                     <LodashObjectsCollections/>
                     <LodashExample/>
