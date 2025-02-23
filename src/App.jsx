@@ -26,6 +26,8 @@ import ScalesAndAxes from "./Components/ScalesAndAxes.jsx";
 import InteractiveChart from "./Components/InteractiveChart.jsx";
 import ComplexVisualizations from "./Components/ComplexVisualizations.jsx";
 import BigDataVisualization from "./Components/BigDataVisualization.jsx";
+import AxiosPostExample from "./Components/AxiosPostExample.jsx";
+import AxiosExample from "./Components/AxiosExample.jsx";
 
 const App = () => {
     return (
@@ -44,6 +46,8 @@ const App = () => {
                         <Route path="/about" element={<About/>}/>
                         <Route path="/profile" element={<PrivateRoute component={Profile}/>}/>
                     </Routes>
+                    <AxiosPostExample/>
+                    <AxiosExample/>
                     <BigDataVisualization/>
                     <ComplexVisualizations/>
                     <InteractiveChart/>
