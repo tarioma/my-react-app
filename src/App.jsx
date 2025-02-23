@@ -35,6 +35,7 @@ import JqueryInReact from "./Components/JqueryInReact.jsx";
 import LodashInReact from "./Components/LodashInReact.jsx";
 import DataVisualization from "./Components/DataVisualization.jsx";
 import LineChart2 from "./Components/LineChart2.jsx";
+import FetchDataAndVisualize from "./Components/FetchDataAndVisualize.jsx";
 
 const App = () => {
     return (
@@ -53,6 +54,7 @@ const App = () => {
                         <Route path="/about" element={<About/>}/>
                         <Route path="/profile" element={<PrivateRoute component={Profile}/>}/>
                     </Routes>
+                    <FetchDataAndVisualize/>
                     <LineChart2/>
                     <DataVisualization/>
                     <LodashInReact/>
