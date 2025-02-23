@@ -24,6 +24,8 @@ import D3Example from "./Components/D3Example.jsx";
 import LineChart from "./Components/LineChart.jsx";
 import ScalesAndAxes from "./Components/ScalesAndAxes.jsx";
 import InteractiveChart from "./Components/InteractiveChart.jsx";
+import ComplexVisualizations from "./Components/ComplexVisualizations.jsx";
+import BigDataVisualization from "./Components/BigDataVisualization.jsx";
 
 const App = () => {
     return (
@@ -42,6 +44,8 @@ const App = () => {
                         <Route path="/about" element={<About/>}/>
                         <Route path="/profile" element={<PrivateRoute component={Profile}/>}/>
                     </Routes>
+                    <BigDataVisualization/>
+                    <ComplexVisualizations/>
                     <InteractiveChart/>
                     <ScalesAndAxes/>
                     <LineChart/>
