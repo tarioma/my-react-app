@@ -32,6 +32,7 @@ import FetchDataWithAxios from "./Components/FetchDataWithAxios.jsx";
 import UpdateDataWithAxios from "./Components/UpdateDataWithAxios.jsx";
 import AxiosWithInterceptors from "./Components/AxiosWithInterceptors.jsx";
 import JqueryInReact from "./Components/JqueryInReact.jsx";
+import LodashInReact from "./Components/LodashInReact.jsx";
 
 const App = () => {
     return (
@@ -50,6 +51,7 @@ const App = () => {
                         <Route path="/about" element={<About/>}/>
                         <Route path="/profile" element={<PrivateRoute component={Profile}/>}/>
                     </Routes>
+                    <LodashInReact/>
                     <JqueryInReact/>
                     <AxiosWithInterceptors/>
                     <UpdateDataWithAxios/>
