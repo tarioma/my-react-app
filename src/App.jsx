@@ -30,6 +30,7 @@ import AxiosPostExample from "./Components/AxiosPostExample.jsx";
 import AxiosExample from "./Components/AxiosExample.jsx";
 import FetchDataWithAxios from "./Components/FetchDataWithAxios.jsx";
 import UpdateDataWithAxios from "./Components/UpdateDataWithAxios.jsx";
+import JqueryInReact from "./Components/JqueryInReact.jsx";
 
 const App = () => {
     return (
@@ -48,6 +49,7 @@ const App = () => {
                         <Route path="/about" element={<About/>}/>
                         <Route path="/profile" element={<PrivateRoute component={Profile}/>}/>
                     </Routes>
+                    <JqueryInReact/>
                     <UpdateDataWithAxios/>
                     <FetchDataWithAxios/>
                     <AxiosPostExample/>
